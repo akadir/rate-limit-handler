@@ -8,10 +8,6 @@ repositories {
     mavenCentral()
 }
 
-repositories {
-    mavenCentral()
-}
-
 dependencies {
     compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
     compile group: 'org.twitter4j', name: 'twitter4j-core', version: '4.0.7'
