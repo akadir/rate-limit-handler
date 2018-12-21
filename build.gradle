@@ -1,4 +1,4 @@
-group 'com.kadir.twitterbots'
+group 'com.kadir.twitterbots.commons'
 
 apply plugin: 'java'
 
