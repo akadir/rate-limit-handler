@@ -6,7 +6,8 @@ package com.kadir.twitterbots.ratelimithandler.process;
  * Time: 23:23
  */
 public enum ApiProcessType {
-    SEARCH("search"), SHOW_STATUS("showStatus"), SHOW_USER("showUser"), UPDATE_STATUS("updateStatus"), GET_BLOCKS_IDS("getBlocksIDs");
+    SEARCH("search"), SHOW_STATUS("showStatus"), SHOW_USER("showUser"), UPDATE_STATUS("updateStatus"),
+    GET_BLOCKS_IDS("getBlocksIDs"), GET_USER_LISTS("getUserLists"), GET_USER_LIST_MEMBERS("getUserListMembers");
 
     private String name;
 
