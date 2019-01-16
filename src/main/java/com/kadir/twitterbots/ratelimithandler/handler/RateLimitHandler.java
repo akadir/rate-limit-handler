@@ -44,7 +44,8 @@ public class RateLimitHandler {
         }
 
         if (sleep > 0) {
-            logger.debug("Sleep {} seconds for the next {} process. Thread name: {}", String.format("%.2f", sleep), processType.getName(), Thread.currentThread().getName());
+            if (logger.isDebugEnabled())
+                logger.debug("Sleep {} seconds for the next {} process. Thread name: {}", String.format("%.2f", sleep), processType.getName(), Thread.currentThread().getName());
             Thread.sleep((long) (sleep * 1000));
         }
     }
