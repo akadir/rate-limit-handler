@@ -21,8 +21,8 @@ public class RateLimitHandler {
     }
 
     public static void handle(long id, RateLimitStatus rts, ApiProcessType processType) throws InterruptedException {
-        //as default use 180 calls per 15 minute period (+75 seconds)
-        double sleep = processType.getDelayInSecond() > 0 ? processType.getDelayInSecond() : 15.0 * 65.0 / 180.0;
+        //as default use 180 calls per 15 minute period (+15 seconds)
+        double sleep = processType.getDelayInSecond() > 0 ? processType.getDelayInSecond() : 15.0 * 61.0 / 180.0;
         if (rts != null) {
             RateLimitStatus oldRTS = rateLimit.get(id + "-" + processType.getName());
             double remaining = rts.getRemaining();
