@@ -20,7 +20,7 @@ public class RateLimitHandler {
     private RateLimitHandler() {
     }
 
-    public static void handle(long id, RateLimitStatus rts, ApiProcessType processType) throws InterruptedException {
+    public static void handle(long id, RateLimitStatus rts, ApiProcessType processType) {
         //as default use 180 calls per 15 minute period (+15 seconds)
         double sleep = processType.getDelayInSecond() > 0 ? processType.getDelayInSecond() : 15.0 * 61.0 / 180.0;
         if (rts != null) {
@@ -46,7 +46,12 @@ public class RateLimitHandler {
         if (sleep > 0) {
             if (logger.isDebugEnabled())
                 logger.debug("Sleep {} seconds for the next {} process. Thread name: {}", String.format("%.2f", sleep), processType.getName(), Thread.currentThread().getName());
-            Thread.sleep((long) (sleep * 1000));
+            try {
+                Thread.sleep((long) (sleep * 1000));
+            } catch (InterruptedException e) {
+                logger.error("Interrupted: ", e);
+                Thread.currentThread().interrupt();
+            }
         }
     }
 }
