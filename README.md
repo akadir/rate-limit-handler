@@ -1,5 +1,6 @@
 # rate-limit-handler
 
+[![Build Status](https://travis-ci.org/akadir/rate-limit-handler.svg?branch=master)](https://travis-ci.org/akadir/rate-limit-handler)
 [![gradle-version](https://img.shields.io/badge/gradle-5.5.1-brightgreen)](https://img.shields.io/badge/gradle-5.5.1-brightgreen)
 
 Project to handle twitter api rate limits.
