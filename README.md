@@ -26,7 +26,7 @@ build.gradle:
 
 ```groovy
 dependencies {
-  implementation 'com.kadir.twitterbots.commons:bot-authenticator:1.0'
+  implementation 'com.kadir.twitterbots.commons:rate-limit-handler:1.0'
 }
 ```
 
