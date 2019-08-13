@@ -46,3 +46,13 @@ ResponseList<Status> statuses;
 statuses = twitter.getUserTimeline(twitter.getId(), paging);
 RateLimitHandler.handle(twitter.getId(), statuses.getRateLimitStatus(), ApiProcessType.GET_USER_TIMELINE);
 ```
+
+### Used Projects
+
+- [alligator](https://github.com/akadir/alligator)
+- [crocodile](https://github.com/akadir/crocodile)
+- [eagle](https://github.com/akadir/eagle)
+- [elephant](https://github.com/akadir/elephant)
+- [giraffe](https://github.com/akadir/giraffe)
+- [squirrel](https://github.com/akadir/squirrel)
+- [worm](https://github.com/akadir/worm)
