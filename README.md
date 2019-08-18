@@ -47,7 +47,7 @@ statuses = twitter.getUserTimeline(twitter.getId(), paging);
 RateLimitHandler.handle(twitter.getId(), statuses.getRateLimitStatus(), ApiProcessType.GET_USER_TIMELINE);
 ```
 
-### Used Projects
+### Projects Used rate-limit-handler
 
 - [alligator](https://github.com/akadir/alligator)
 - [crocodile](https://github.com/akadir/crocodile)
